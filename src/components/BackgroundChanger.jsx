@@ -1,10 +1,14 @@
 import { useRecoilValue, useSetRecoilState, useRecoilState } from "recoil";
 import { colorAtom } from "../Atoms";
+import { SwitchButton } from "./SwtichButton";
 
 export function BackgroundChanger() {
     const colorValue = useRecoilValue(colorAtom);
     return(
         <>
+            <div className="fixed right-5 top-5 text-white">
+                <SwitchButton />
+            </div>
             <div 
                 className="h-dvh bg-gray-500"
                 style={{backgroundColor:`${colorValue}`}}

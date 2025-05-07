@@ -1,3 +1,4 @@
+import { SwitchButton } from "./SwtichButton"
 
 export function Profile({
     name,
@@ -33,6 +34,32 @@ export function Profile({
                     </div>
                 </div>
             </div>
+        </>
+    )
+}
+
+export function ProfileSetup() {
+  return(
+    <>
+      <div className="fixed right-5 top-5 text-black">
+        <SwitchButton/>
+      </div>
+      <div className="flex flex-col justify-center items-center pt-30">
+        <Profile name={"Lavkush"} place={"Greater noida"} followers={23} likes={45} photos={2.7} img={"lav.jpg"}></Profile>
+      </div>
+    </>
+  )
+}
+
+
+function GenerateCard() {
+    return (
+        <>
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Location" />
+            <input type="text" placeholder="Followers" />
+            <input type="text" placeholder="likes" />
+            <input type="text" placeholder="photos" />
         </>
     )
 }
